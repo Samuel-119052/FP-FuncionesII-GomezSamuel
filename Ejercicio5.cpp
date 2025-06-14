@@ -17,8 +17,16 @@ void CalcularRaices(double a, double b, double c, double &X1, double &X2, bool &
 int main(){
 	double a, b, c, X1, X2;
 	bool R;
-	cout<<Ingrese los coeficientes de la ecuacion cuadratica<<endl;
+	cout<<"Ingrese los coeficientes de la ecuacion cuadratica"<<endl;
 	cin>>a>>b>>c;
 	CalcularRaices(a, b, c, X1, X2, R);
+	if(R==true){
+		cout<<"Las raices reales quedan soluciona la ecuacion son: "<<endl;
+		cout<<X1<<" y "<<X2<<endl;
+	}else{
+		cout<<"La raices complejas que dan solucion a la ecuacion son: "<<endl;
+		cout<<X1<<" + "<<X2<<"i"<<endl;
+		cout<<X1<<" - "<<X2<<"i"<<endl;
+	}
 	return 0;
 }
